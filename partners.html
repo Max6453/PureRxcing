@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pure Rxcing | Partners</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="icon" type="icon" href="./src/Assets/Content/icon.png">
+	  <meta name="description" content="Pure Rxcing, Professional team from Lithuania racing in WEC, GTWC, ALMS and more." />
+	  <link rel="canonical" href="https://www.PureRxcing.com/" />
+	  <meta property="og:locale" content="en_US" />
+	  <meta property="og:type" content="website" />
+  	<meta property="og:title" content="Home - Pure Rxcing" />
+	  <meta property="og:description" content="Pure Rxcing, Professional team from Lithuania racing in WEC, GTWC, ALMS and more." />
+  	<meta property="og:url" content="https://www.PureRxcing.com/" />
+	  <meta property="og:site_name" content="Pure Rxcing" />
+	  <meta property="article:publisher" content="https://www.instagram.com/purerxcing/" />
+  	<meta property="article:modified_time" content="2023-02-28T08:42:02+00:00" />
+  	<meta name="twitter:card" content="summary_large_image" />
+  	<meta name="msvalidate.01" content="A6B70FDA1B7B883A373BF1E83A0FFC7B" />
+  	<meta name="google-site-verification" content="google4469e2cada55ca59" />
+    <script src="https://cmp.osano.com/AzZu9oUSKmHuVDIp0/72a99fd4-572c-4148-ad71-1ce257224984/osano.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="https://kit.fontawesome.com/428684f03b.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
+    <script src="./src/UI/Components/Navbar.js"></script>
+    <script src="./src/UI/Components/loader.js"></script>
+
+  <link rel="stylesheet" href="./src/UI/css/loader.css" type="text/css" media="all">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./src/UI/css/theme/headers.css">
+  <link rel="stylesheet" href="./src/UI/css/theme/body.css">
+</head>
+<body>
+    <nav class="bg-background text-text" id="start">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-text">
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="./src/Assets/Content/icon.png" class=" h-16 rounded-lg" alt="Pure Rxcing Logo" />
+          </a>
+          <button data-collapse-toggle="navbar-dropdown" type="button"
+                  class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-text rounded-lg md:hidden" aria-controls="navbar-dropdown" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto text-text" id="navbar-dropdown">
+            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-background">
+              <li>
+                <a href="./index.html" class="transition-max ease-in-out duration-300 block py-2 px-3 hover:text-white rounded md:p-0">Home</a>
+              </li>
+              <li>
+                  <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                  class="transition-max ease-in-out duration-300 flex items-center justify-between w-full py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                    Team
+                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                    </svg>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div id="dropdownNavbar" class="z-10 hidden font-normal bg-background divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                      <ul class="py-2 text-sm text-text dark:text-gray-400 transition-max ease-in-out duration-300" aria-labelledby="dropdownLargeButton">
+                        <li>
+                          <a href="./About.html" class="block px-4 py-2 hover:text-white">About</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:text-white">Drivers</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:text-white">Cars</a>
+                        </li>
+                      </ul>
+                  </div>
+              </li>
+              <li>
+                <a href="./calendar.html" class="transition-max ease-in-out duration-300 block py-2 px-3 text-text rounded hover:bg-background md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                  Calendar</a>
+              </li>
+              <li>
+                <a href="./partners.html" class="transition-max ease-in-out duration-300 block py-2 px-3 text-white rounded hover:bg-background md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">
+                  Partners</a>
+              </li>
+              <li>
+                <a href="./contact.html" class="transition-max ease-in-out duration-300 block py-2 px-3 text-textrounded hover:bg-background md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                  Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--End Navbar-->
+      <hr>
+      <!--Partners-->
+      <div class="bg-background py-24 sm:py-32 text-text">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <h2 class="text-center text-lg/8 font-semibold text-text">Thanks to our fans, partners and suppliers we can inovate and win races, championships and hearts of our dearest fans</h2>
+          <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="./src/Assets/Content/logo-motlu.svg" alt="Transistor" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="./src/Assets/Content/Goodyear_logo-1.jpg" alt="Reform" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="./src/Assets/Content/riedel.png" alt="Transistor" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="./src/Assets/Content/kus.svg" alt="Transistor" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="./src/Assets/Content/endless-advanced-racing-brake-technology-logo-CBD57AC9C7-seeklogo.com.png" alt="Transistor" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="./src/Assets/Content/manthey-racing-logo-75C6BD9C9A-seeklogo.com.png" alt="Tuple" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="./src/Assets/Content/porsche-logo-png_seeklogo-168544.png" alt="SavvyCal" width="200" height="100">
+            <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="./src/Assets/Content/BBS-Symbol.png" alt="Statamic" width="158" height="48">
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!--End Partners-->
+    <footer class="bg-background text-white">
+    <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Column 1 -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-text">Links</h3>
+          <ul>
+            <li><a href="./About.html" class="hover:text-text transition-max ease-in-out duration-300">About Us</a></li>
+            <li><a href="./About.html" class="hover:text-text transition-max ease-in-out duration-300">Careers</a></li>
+            <li><a href="#News" class="hover:text-text transition-max ease-in-out duration-300">News</a></li>
+            <li><a href="./" class="hover:text-text transition-max ease-in-out duration-300">Cars</a></li>
+            <li><a href="./partners.html" class="hover:text-text transition-max ease-in-out duration-300">Partners</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 2 -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-text">Support</h3>
+          <ul>
+            <li><a href="./" class="hover:text-text transition-max ease-in-out duration-300">Cookie Policy</a></li>
+            <li><a href="./privacy-policy.html" target="_blank" class="hover:text-text transition-max ease-in-out duration-300">Privacy Policy</a></li>
+            <li><a href="./Terms-and-Conditions.html" target="_blank" class="hover:text-text transition-max ease-in-out duration-300">Terms and Conditions</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3 -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-text">Racing Series</h3>
+          <ul>
+            <li><a href="https://www.fiawec.com/en/team/6363" class="hover:text-text transition-max ease-in-out duration-300">FIA World Endurance Championship</a></li>
+            <li><a href="https://www.gt-world-challenge-europe.com/team/702/pure-rxcing" class="hover:text-text transition-max ease-in-out duration-300">GT World Championship</a></li>
+            <li><a href="https://www.asianlemansseries.com/entries/article.php?profile_id=74" class="hover:text-text transition-max ease-in-out duration-300">Asian Le Man's Series</a></li>
+            <li><a href="https://www.europeanlemansseries.com/team/6425" class="hover:text-text transition-max ease-in-out duration-300">European Le Man's Series</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4 -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-text">Follow Us</h3>
+          <ul class="flex space-x-4">
+            <li>
+              <a href="https://www.instagram.com/purerxcing/?hl=sk" class="hover:underline link link-underline link-underline-black text-black">
+                <i class="fa-brands fa-instagram fa-2xl" style="color: #FFD43B;"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 top-10 relative text-center text-sm text-gray-400 w-full">
+        &copy; 2024 Pure Rxcing. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

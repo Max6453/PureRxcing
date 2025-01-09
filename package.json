@@ -1,0 +1,22 @@
+{
+  "name": "pure-rxcing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./PureRxcing/src/input.css -o ./PureRxcing/src/output.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "flowbite": "^2.5.2",
+    "framer-motion": "^11.15.0",
+    "mongoose": "^8.9.3"
+  },
+  "keywords": [],
+  "description": ""
+}

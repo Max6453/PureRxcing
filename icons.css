@@ -1,0 +1,6 @@
+i{
+    color: theme(colors.text);
+}
+i:hover{
+    color: white;
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pure Rxcing Official Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Pure Rxcing, Professional team from Lithuania racing in WEC, GTWC, ALMS and more." />
+
+	  <meta property="og:locale" content="en_US" />
+	  <meta property="og:type" content="website" />
+  	<meta property="og:title" content="Home - Pure Rxcing" />
+	  <meta property="og:description" content="Pure Rxcing, Professional team from Lithuania racing in WEC, GTWC, ALMS and more." />
+  	<meta property="og:url" content="https://www.PureRxcing.com/" />
+	  <meta property="og:site_name" content="Pure Rxcing" />
+
+	  <meta property="article:publisher" content="https://www.instagram.com/purerxcing/" />
+  	<meta property="article:modified_time" content="2023-02-28T08:42:02+00:00" />
+  	<meta name="twitter:card" content="summary_large_image" />
+  	<meta name="msvalidate.01" content="A6B70FDA1B7B883A373BF1E83A0FFC7B" />
+  	<meta name="google-site-verification" content="google4469e2cada55ca59" />
+
+    <script src="https://cmp.osano.com/AzZu9oUSKmHuVDIp0/72a99fd4-572c-4148-ad71-1ce257224984/osano.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="https://kit.fontawesome.com/428684f03b.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
+    <script src="./src/UI/Components/Navbar.js"></script>
+    <script src="./src/UI/Components/loader.js"></script>
+
+    <link rel="icon" type="icon" href="./src/Assets/Content/icon.png">
+	  <link rel="canonical" href="https://www.PureRxcing.com/" />
+
+    <link rel="stylesheet" href="./src/UI/css/loader.css" type="text/css" media="all">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/UI/css/theme/headers.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./src/UI/css/theme/body.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./src/UI/css/theme/icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./src/output.css" type="text/css" media="all">
+
+  
+</head>
+<body>
+  <!--Navbar-->
+  <nav class="bg-background text-text" id="start">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-text">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="./src/Assets/Content/icon.png" class=" h-16 rounded-lg" alt="Pure Rxcing Logo" />
+      </a>
+      <button data-collapse-toggle="navbar-dropdown" type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-text rounded-lg md:hidden" aria-controls="navbar-dropdown" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto text-text" id="navbar-dropdown">
+        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-background">
+          <li>
+            <a href="#" class="block py-2 px-3 text-white rounded md:p-0" aria-current="page">Home</a>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+              class="transition-max ease-in-out duration-300 flex items-center justify-between w-full py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                Team
+                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-background divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-text dark:text-gray-400 transition-max ease-in-out duration-300" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="./About.html" class="block px-4 py-2 hover:text-white">About</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:text-white">Drivers</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:text-white">Cars</a>
+                    </li>
+                  </ul>
+              </div>
+          </li>
+          <li>
+            <a href="./calendar.html" class="transition-max ease-in-out duration-300 block py-2 px-3 text-text rounded hover:bg-background md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+              Calendar</a>
+          </li>
+          <li>
+            <a href="./partners.html" class="transition-max ease-in-out duration-300 block py-2 px-3 text-textrounded hover:bg-background md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+              Partners</a>
+          </li>
+          <li>
+            <a href="./contact.html" class="transition-max ease-in-out duration-300 block py-2 px-3 text-textrounded hover:bg-background md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+              Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--End Navbar-->
+
+<!--Background photo-->
+    <img src="./src/Assets/Content/thumbnail.jpg" class="h-full w-full -z-50 relative max-md:h-56">
+    <h1 class="absolute bg-opacity-50 h-auto text-text pl-3 top-full text-7xl w-full bg-background rounded-tl animate-fadeUp">RACE WITH PASSION</h1>
+    <!--End Bg Photo-->
+
+    <!--Main section-->
+    <div class="relative isolate overflow-hidden bg-background px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0 animate-fadeUp">
+      <div class="absolute inset-0 -z-10 overflow-hidden">
+      </div>
+      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+        <div class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+          <div class="lg:pr-4">
+            <div class="lg:max-w-lg">
+              <h1 class="mt-2 text-pretty text-5xl font-semibold tracking-tight text-text sm:text-5xl">Pure Rxcing</h1>
+              <p class="mt-6 text-xl/8 text-text">
+                We are a Lithuanian sports car racing team that currently competes in ALMS, ELMS, GTWC and WEC. Founded in 2022 by race mechanic and engineer Edgar Kochanovskij, powered and motivated to win.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+          <img class="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" src="./src/Assets/Content/LMGT3-Premiere-92-Bachler-Malykhin-Sturm.jpg.webp" alt="">
+        </div>
+        <div class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+          <div class="lg:pr-4">
+            <div class="max-w-xl text-base/7 text-text lg:max-w-lg">
+              <p>
+                Having worked as a mechanic and engineer in motorsport for several years, Edgar Kochanovskij formed his own racing team, Pure Rxcing, in late 2022. The team made its competitive debut in the 2022–23 Middle East Trophy at the 2023 6 Hours of Abu Dhabi.
+              </p>
+              <h2 class="mt-16 text-2xl font-bold tracking-tight text-white">2023</h2>
+              <p class="mt-8">
+                In 2023, Pure Rxcing entered the GT World Challenge Europe fielding the No. 911 Porsche 911 GT3 R (992) with support from German squad Herberth Motorsport in the Bronze Cup class. Alex Malykhin would serve as the team's bronze-graded driver, being joined by Ayhancan Güven for the Sprint Cup, Klaus Bachler and Joel Sturm in the Endurance Cup and Marco Seefried for the 24 Hours of Spa. The team would win twice, including their debut race at Monza, and Malykhin was crowned Bronze Cup champion.
+              </p>
+              <h2 class="mt-16 text-2xl font-bold tracking-tight text-white">2024</h2>
+              <p class="mt-6">
+                Pure Rxcing returned to the Endurance Cup in 2024 with an unchanged car and lineup, but would instead take on the Pro class, with Kochanovskij stating they had "nothing more to achieve" in Bronze.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Main Section-->
+    <hr class="text-text">
+    <!--News-->
+    <div class="bg-background animate-fadeUp" id="News">
+      <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <h1 class="text-7xl text-text pb-5 justify-center text-center">NEWS</h1>
+        <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+          <a href="./Pure-Rxcing-Revails-New-Livery-For-Its-LMP2-Car-In-ELMS.html" class="group">
+            <img src="./src/Assets/Content/Pure-Rxcing-LPM2-car.jpg" alt="Pure Rxcing revails new livery for ELMS" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
+            <h3 class="mt-4 text-sm text-text">Pure Rxcing revails new livery for its LPM2 car in European Le man's Series</h3>
+          </a>
+          <a href="#" class="group">
+            <img src="./src/Assets/Content/LMGT3-Premiere-92-Bachler-Malykhin-Sturm.jpg (1).webp" alt="First time Winner in WEC" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
+            <h3 class="mt-4 text-sm text-text">Pure Rxcing wins its first drivers and constructors championship in FIA World Endurance Championship</h3>
+          </a>
+          <a href="#" class="group">
+            <img src="./src/Assets/Content/92-Pure-Rxcing-Porsche-911-GT3-R-LMGT3-FIA-WEC-2024-Qatar-2.jpg" alt="Pure Rxcing Wins in Qatar" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
+            <h3 class="mt-4 text-sm text-text">Pure Rxcing victorious in 1812Km of Qatar</h3>
+          </a>
+          <a href="#" class="group">
+            <img src="./src/Assets/Content/icon.png" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
+            <h3 class="mt-4 text-sm text-text">Statement</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--End News-->
+    <button class=" right-0 fixed w-16 h-6 bottom-3 size-40">
+      <a href="#start">
+      <i class="fa-solid fa-arrow-up fa-2xl" style="color: #fbff00"></i></a>
+    </button>
+    <hr>
+    <!--Footer-->
+    <footer class="bg-background text-white">
+      <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Column 1 -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4 text-text">Links</h3>
+            <ul>
+              <li><a href="./About.html" class="hover:text-text transition-max ease-in-out duration-300">About Us</a></li>
+              <li><a href="./About.html" class="hover:text-text transition-max ease-in-out duration-300">Careers</a></li>
+              <li><a href="#News" class="hover:text-text transition-max ease-in-out duration-300">News</a></li>
+              <li><a href="./" class="hover:text-text transition-max ease-in-out duration-300">Cars</a></li>
+              <li><a href="./partners.html" class="hover:text-text transition-max ease-in-out duration-300">Partners</a></li>
+            </ul>
+          </div>
+          
+          <!-- Column 2 -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4 text-text">Support</h3>
+            <ul>
+              <li><a href="./" class="hover:text-text transition-max ease-in-out duration-300">Cookie Policy</a></li>
+              <li><a href="./privacy-policy.html" target="_blank" class="hover:text-text transition-max ease-in-out duration-300">Privacy Policy</a></li>
+              <li><a href="./Terms-and-Conditions.html" target="_blank" class="hover:text-text transition-max ease-in-out duration-300">Terms and Conditions</a></li>
+            </ul>
+          </div>
+          
+          <!-- Column 3 -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4 text-text">Racing Series</h3>
+            <ul>
+              <li><a href="https://www.fiawec.com/en/team/6363" class="hover:text-text transition-max ease-in-out duration-300">FIA World Endurance Championship</a></li>
+              <li><a href="https://www.gt-world-challenge-europe.com/team/702/pure-rxcing" class="hover:text-text transition-max ease-in-out duration-300">GT World Championship</a></li>
+              <li><a href="https://www.asianlemansseries.com/entries/article.php?profile_id=74" class="hover:text-text transition-max ease-in-out duration-300">Asian Le Man's Series</a></li>
+              <li><a href="https://www.europeanlemansseries.com/team/6425" class="hover:text-text transition-max ease-in-out duration-300">European Le Man's Series</a></li>
+            </ul>
+          </div>
+          
+          <!-- Column 4 -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4 text-text">Follow Us</h3>
+            <ul class="flex space-x-4">
+              <li>
+                <a href="https://www.instagram.com/purerxcing/?hl=sk" class="hover:underline link link-underline link-underline-black text-black hover:text-white">
+                  <i class="fa-brands fa-instagram fa-2xl text-text transition-max ease-in-out duration-30"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-10 top-10 relative text-center text-sm text-gray-400 w-full">
+          &copy; 2024 Pure Rxcing. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <!--End footer-->
+</body>
+</html>
