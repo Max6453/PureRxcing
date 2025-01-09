@@ -23,18 +23,18 @@
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="https://kit.fontawesome.com/428684f03b.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
-    <script src="./src/UI/Components/Navbar.js"></script>
-    <script src="./src/UI/Components/loader.js"></script>
+    <script src="Navbar.js"></script>
+    <script src="loader.js"></script>
 
-    <link rel="icon" type="icon" href="./src/Assets/Content/icon.png">
+    <link rel="icon" type="icon" href="icon.png">
 	  <link rel="canonical" href="https://www.PureRxcing.com/" />
 
-    <link rel="stylesheet" href="./src/UI/css/loader.css" type="text/css" media="all">
+    <link rel="stylesheet" href="loader.css" type="text/css" media="all">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./src/UI/css/theme/headers.css" type="text/css" media="all">
-    <link rel="stylesheet" href="./src/UI/css/theme/body.css" type="text/css" media="all">
-    <link rel="stylesheet" href="./src/UI/css/theme/icons.css" type="text/css" media="all">
-    <link rel="stylesheet" href="./src/output.css" type="text/css" media="all">
+    <link rel="stylesheet" href="headers.css" type="text/css" media="all">
+    <link rel="stylesheet" href="body.css" type="text/css" media="all">
+    <link rel="stylesheet" href="icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href=".output.css" type="text/css" media="all">
 
   
 </head>
@@ -43,7 +43,7 @@
   <nav class="bg-background text-text" id="start">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-text">
       <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="./src/Assets/Content/icon.png" class=" h-16 rounded-lg" alt="Pure Rxcing Logo" />
+          <img src="icon.png" class=" h-16 rounded-lg" alt="Pure Rxcing Logo" />
       </a>
       <button data-collapse-toggle="navbar-dropdown" type="button"
               class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-text rounded-lg md:hidden" aria-controls="navbar-dropdown" aria-expanded="false">
@@ -69,7 +69,7 @@
               <div id="dropdownNavbar" class="z-10 hidden font-normal bg-background divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                   <ul class="py-2 text-sm text-text dark:text-gray-400 transition-max ease-in-out duration-300" aria-labelledby="dropdownLargeButton">
                     <li>
-                      <a href="./About.html" class="block px-4 py-2 hover:text-white">About</a>
+                      <a href="About.html" class="block px-4 py-2 hover:text-white">About</a>
                     </li>
                     <li>
                       <a href="#" class="block px-4 py-2 hover:text-white">Drivers</a>
@@ -81,15 +81,15 @@
               </div>
           </li>
           <li>
-            <a href="./calendar.html" class="transition-max ease-in-out duration-300 block py-2 px-3 text-text rounded hover:bg-background md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+            <a href="calendar.html" class="transition-max ease-in-out duration-300 block py-2 px-3 text-text rounded hover:bg-background md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
               Calendar</a>
           </li>
           <li>
-            <a href="./partners.html" class="transition-max ease-in-out duration-300 block py-2 px-3 text-textrounded hover:bg-background md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+            <a href="partners.html" class="transition-max ease-in-out duration-300 block py-2 px-3 text-textrounded hover:bg-background md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
               Partners</a>
           </li>
           <li>
-            <a href="./contact.html" class="transition-max ease-in-out duration-300 block py-2 px-3 text-textrounded hover:bg-background md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+            <a href="contact.html" class="transition-max ease-in-out duration-300 block py-2 px-3 text-textrounded hover:bg-background md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
               Contact</a>
           </li>
         </ul>
@@ -99,7 +99,7 @@
   <!--End Navbar-->
 
 <!--Background photo-->
-    <img src="./src/Assets/Content/thumbnail.jpg" class="h-full w-full -z-50 relative max-md:h-56">
+    <img src="thumbnail.jpg" class="h-full w-full -z-50 relative max-md:h-56">
     <h1 class="absolute bg-opacity-50 h-auto text-text pl-3 top-full text-7xl w-full bg-background rounded-tl animate-fadeUp">RACE WITH PASSION</h1>
     <!--End Bg Photo-->
 
@@ -147,20 +147,20 @@
       <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h1 class="text-7xl text-text pb-5 justify-center text-center">NEWS</h1>
         <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-          <a href="./Pure-Rxcing-Revails-New-Livery-For-Its-LMP2-Car-In-ELMS.html" class="group">
-            <img src="./src/Assets/Content/Pure-Rxcing-LPM2-car.jpg" alt="Pure Rxcing revails new livery for ELMS" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
+          <a href="Pure-Rxcing-Revails-New-Livery-For-Its-LMP2-Car-In-ELMS.html" class="group">
+            <img src="Pure-Rxcing-LPM2-car.jpg" alt="Pure Rxcing revails new livery for ELMS" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
             <h3 class="mt-4 text-sm text-text">Pure Rxcing revails new livery for its LPM2 car in European Le man's Series</h3>
           </a>
           <a href="#" class="group">
-            <img src="./src/Assets/Content/LMGT3-Premiere-92-Bachler-Malykhin-Sturm.jpg (1).webp" alt="First time Winner in WEC" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
+            <img src="LMGT3-Premiere-92-Bachler-Malykhin-Sturm.jpg (1).webp" alt="First time Winner in WEC" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
             <h3 class="mt-4 text-sm text-text">Pure Rxcing wins its first drivers and constructors championship in FIA World Endurance Championship</h3>
           </a>
           <a href="#" class="group">
-            <img src="./src/Assets/Content/92-Pure-Rxcing-Porsche-911-GT3-R-LMGT3-FIA-WEC-2024-Qatar-2.jpg" alt="Pure Rxcing Wins in Qatar" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
+            <img src="92-Pure-Rxcing-Porsche-911-GT3-R-LMGT3-FIA-WEC-2024-Qatar-2.jpg" alt="Pure Rxcing Wins in Qatar" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
             <h3 class="mt-4 text-sm text-text">Pure Rxcing victorious in 1812Km of Qatar</h3>
           </a>
           <a href="#" class="group">
-            <img src="./src/Assets/Content/icon.png" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
+            <img src="icon.png" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
             <h3 class="mt-4 text-sm text-text">Statement</h3>
           </a>
         </div>
@@ -181,11 +181,11 @@
           <div>
             <h3 class="text-lg font-semibold mb-4 text-text">Links</h3>
             <ul>
-              <li><a href="./About.html" class="hover:text-text transition-max ease-in-out duration-300">About Us</a></li>
-              <li><a href="./About.html" class="hover:text-text transition-max ease-in-out duration-300">Careers</a></li>
+              <li><a href="About.html" class="hover:text-text transition-max ease-in-out duration-300">About Us</a></li>
+              <li><a href="About.html" class="hover:text-text transition-max ease-in-out duration-300">Careers</a></li>
               <li><a href="#News" class="hover:text-text transition-max ease-in-out duration-300">News</a></li>
-              <li><a href="./" class="hover:text-text transition-max ease-in-out duration-300">Cars</a></li>
-              <li><a href="./partners.html" class="hover:text-text transition-max ease-in-out duration-300">Partners</a></li>
+              <li><a href="" class="hover:text-text transition-max ease-in-out duration-300">Cars</a></li>
+              <li><a href="partners.html" class="hover:text-text transition-max ease-in-out duration-300">Partners</a></li>
             </ul>
           </div>
           
@@ -193,9 +193,9 @@
           <div>
             <h3 class="text-lg font-semibold mb-4 text-text">Support</h3>
             <ul>
-              <li><a href="./" class="hover:text-text transition-max ease-in-out duration-300">Cookie Policy</a></li>
-              <li><a href="./privacy-policy.html" target="_blank" class="hover:text-text transition-max ease-in-out duration-300">Privacy Policy</a></li>
-              <li><a href="./Terms-and-Conditions.html" target="_blank" class="hover:text-text transition-max ease-in-out duration-300">Terms and Conditions</a></li>
+              <li><a href="#" class="hover:text-text transition-max ease-in-out duration-300">Cookie Policy</a></li>
+              <li><a href="privacy-policy.html" target="_blank" class="hover:text-text transition-max ease-in-out duration-300">Privacy Policy</a></li>
+              <li><a href="Terms-and-Conditions.html" target="_blank" class="hover:text-text transition-max ease-in-out duration-300">Terms and Conditions</a></li>
             </ul>
           </div>
           
