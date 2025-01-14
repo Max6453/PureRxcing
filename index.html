@@ -36,7 +36,16 @@
     <script src="./src/UI/Components/Navbar.js"></script>
     <script src="./src/UI/Components/loader.js"></script>
     <script src="./src/UI/Components/navbar.min.js" crossorigin="anonymous" defer></script>
-	
+	<script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+      
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js");
+        });
+      }
+      </script>
     <script data-cookieconsent="ignore">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -366,16 +375,6 @@
       }
       function remove_example_script() {
         console.log("remove_example_script fired!!!");
-      }
-      </script>
-	<script>
-      // Check that service workers are supported
-      if ("serviceWorker" in navigator) {
-        // Use the window load event to keep the page load performant
-      
-        window.addEventListener("load", () => {
-          navigator.serviceWorker.register("./sw.js");
-        });
       }
       </script>
 </body>
