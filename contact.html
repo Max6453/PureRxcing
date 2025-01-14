@@ -1,42 +1,154 @@
 <!DOCTYPE html>
+<!-----NOTE to every developer------>
+<!-----Sorry about the country selection i still don't know how to simplify it---->
 <html lang="en">
 <head>
     <title>Pure Rxcing | Contact</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="./src/output.css">
-    <link rel="icon" type="icon" href="./src/Assets/Content/icon.png">
-	  <meta name="description" content="Pure Rxcing, Professional team from Lithuania racing in WEC, GTWC, ALMS and more." />
-	  <link rel="canonical" href="https://www.PureRxcing.com/" />
+    <meta name="description" content="Pure Rxcing, Professional team from Lithuania racing in WEC, GTWC, ALMS and more." />
+
 	  <meta property="og:locale" content="en_US" />
 	  <meta property="og:type" content="website" />
   	<meta property="og:title" content="Home - Pure Rxcing" />
 	  <meta property="og:description" content="Pure Rxcing, Professional team from Lithuania racing in WEC, GTWC, ALMS and more." />
   	<meta property="og:url" content="https://www.PureRxcing.com/" />
 	  <meta property="og:site_name" content="Pure Rxcing" />
+
 	  <meta property="article:publisher" content="https://www.instagram.com/purerxcing/" />
   	<meta property="article:modified_time" content="2023-02-28T08:42:02+00:00" />
   	<meta name="twitter:card" content="summary_large_image" />
   	<meta name="msvalidate.01" content="A6B70FDA1B7B883A373BF1E83A0FFC7B" />
   	<meta name="google-site-verification" content="google4469e2cada55ca59" />
+
+    <script src="https://unpkg.com/@dunks1980/cookiemunch/cookiemunch.min.js"></script>
     <script src="https://cmp.osano.com/AzZu9oUSKmHuVDIp0/72a99fd4-572c-4148-ad71-1ce257224984/osano.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="https://kit.fontawesome.com/428684f03b.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
-    <script src="./src/UI/Components/Navbar.js"></script>
-    <script src="./src/UI/Components/loader.js"></script>
+    <script src="./UI/Components/Navbar.js"></script>
+    <script src="./UI/Components/loader.js"></script>
+    <script src="./UI/Components/navbar.min.js" crossorigin="anonymous" defer></script>
 
-  <link rel="stylesheet" href="./src/UI/css/loader.css" type="text/css" media="all">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./src/UI/css/theme/headers.css">
-  <link rel="stylesheet" href="./src/UI/css/theme/body.css">
+    <link rel="icon" type="icon" href="./src/Assets/Content/icon.png">
+	  <link rel="canonical" href="https://www.PureRxcing.com/" />
+    <link rel="alternate" href="feed.xml" type="application/rss+xml" title="Pure Rxcing Feed">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@dunks1980/cookiemunch/cookiemunch_flat_dark.min.css">
+    <link rel="stylesheet" href="./UI/css/loader.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./UI/css/theme/headers.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./UI/css/theme/body.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./UI/css/theme/icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./output.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./UI/css/theme/main.css" type="text/css" media="all">
+
+    <script data-cookieconsent="ignore">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("consent", "default", {
+        ad_personalization: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        wait_for_update: 500
+      });
+      gtag("set", "ads_data_redaction", true);
+      gtag("set", "url_passthrough", true);
+    </script>
+    <!-- End Google Consent Mode-->
+    
+    
+    <!-- Google Tag Manager -->
+    <script data-cookieconsent="ignore">
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXX');</script>
+    <!-- End Google Tag Manager -->
+  <style>
+    /* Loader container */
+    .loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #ffffff; /* Background color of the loader */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 1; /* Start fully transparent */
+      transition: opacity 2s ease-in-out; /* Smooth transition for fade-in and fade-out */
+    }
+    
+    /* Fully visible state for the loader */
+    .loader.visible {
+      opacity: 1; /* Fully visible */
+    }
+    
+    /* Hidden state for fade-out effect */
+    .loader.hidden {
+      opacity: 0; /* Fully transparent */
+      pointer-events: none; /* Ensure it's not interactive */
+    }
+    
+    /* Logo animation (optional spinning) */
+    .loader-logo {
+      width: full; /* Adjust the size */
+      /*animation: spin 2s linear infinite; /* Example animation */
+    }
+    /* Main content (initially hidden) */
+    .content {
+      display: none;
+    }
+  </style>
+  <script>
+    window.addEventListener("load", function() {
+      const loader = document.getElementById('loader');
+      const content = document.getElementById('content');
+    
+      // Check if the loader has already been shown
+      if (!localStorage.getItem('loaderShown')) {
+        // Show the loader with fade-in effect
+        loader.classList.add('visible');
+    
+        // Ensure the loader is shown for at least 5 seconds
+        setTimeout(() => {
+          loader.classList.remove('visible'); // Start fade-out
+          loader.classList.add('hidden'); // Add the hidden class for fade-out effect
+    
+          // Wait for the fade-out transition to complete before showing content
+          setTimeout(() => {
+            loader.style.display = 'none'; // Hide the loader completely
+            content.style.display = 'block'; // Show the main content
+            localStorage.setItem('loaderShown', 'true'); // Store that the loader has been shown
+          }, 2000); // 2000 milliseconds = duration of fade-out transition
+        }, 3000); // 5000 milliseconds = 5 seconds
+      } else {
+        // Directly show the content if the loader was already shown
+        loader.style.display = 'none'; // Hide the loader
+        content.style.display = 'block'; // Show the main content
+      }
+    });
+  </script>
+    <div id="loader" class="loader">
+    <img src="./Assets/Content/icon.png" alt="Brand Logo" class="loader-logo">
+    </div>
 </head>
-<body>
+<body class="bg-background">
   <!--Navbar-->
   <nav class="bg-background text-text" id="start">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-text">
       <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="./src/Assets/Content/icon.png" class=" h-16 rounded-lg" alt="Pure Rxcing Logo" />
+          <img src="./Assets/Content/icon.png" class=" h-16 rounded-lg" alt="Pure Rxcing Logo" />
       </a>
       <button data-collapse-toggle="navbar-dropdown" type="button"
               class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-text rounded-lg md:hidden" aria-controls="navbar-dropdown" aria-expanded="false">
@@ -90,21 +202,21 @@
     </div>
   </nav>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d295108.29552076507!2d24.922711407132176!3d54.7002353869514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd93fb5c6408f5%3A0x400d18c70e9dc40!2sVilnius%2C%20Vilnius%20City%20Municipality%2C%20Litva!5e0!3m2!1ssk!2ssk!4v1734990235194!5m2!1ssk!2ssk" width="1346" height="500" class=" max-md:w-96" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d295108.29552076507!2d24.922711407132176!3d54.7002353869514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd93fb5c6408f5%3A0x400d18c70e9dc40!2sVilnius%2C%20Vilnius%20City%20Municipality%2C%20Litva!5e0!3m2!1ssk!2ssk!4v1734990235194!5m2!1ssk!2ssk" width="1342" height="500" class=" max-md:w-screen" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
   <!--Form-->
-  <form class="bg-background">
-    <div class="space-y-10 w-2/3 max-md:w-96 text-center pl-96">
+  <form class="bg-background" action="#" method="post">
+    <div class="space-y-10 w-2/3 max-md:pl-16 text-center lg:pl-96">
       <div class="border-b border-gray-900/10 pb-12">
-        <h2 class="text-base/7 font-semibold text-text">Contact</h2>
+        <h2 class="text-base/7 font-semibold text-text pt-5">Contact</h2>
         <p class="mt-1 text-sm/6 text-text">Via this from you can contact us about potencial sponsorship, carrer or anything</p>
   
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-          <div class="sm:col-span-4 pl-52 ">
-            <label for="username" class="block text-sm/6 font-medium text-text">Username</label>
+          <div class="sm:col-span-4">
+            <label for="username" class="block text-sm/6 font-medium text-text">Name</label>
             <div class="mt-2">
-              <div class="flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
-                <input type="text" name="username" id="username" class="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6" placeholder="janesmith">
+              <div class="flex items-center rounded-md bg-background pl-3 outline outline-1 -outline-offset-1 outline-text focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
+                <input type="text" name="username" id="username" class="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-text placeholder:text-white bg-background focus:outline focus:outline-0 sm:text-sm/6" placeholder="janesmith">
               </div>
             </div>
           </div>
@@ -112,7 +224,7 @@
           <div class="col-span-full">
             <label for="about" class="block text-sm/6 font-medium text-text">About</label>
             <div class="mt-2">
-              <textarea name="about" id="about" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
+              <textarea name="about" id="about" rows="3" class="block w-full rounded-md bg-background px-3 py-1.5 text-text text-gray-900 outline outline-1 -outline-offset-1 outline-text placeholder:text-white focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
             </div>
             <p class="mt-3 text-sm/6 text-text">Write a few sentences about yourself.</p>
           </div>
@@ -127,31 +239,272 @@
           <div class="sm:col-span-3">
             <label for="first-name" class="block text-sm/6 font-medium text-text">First name</label>
             <div class="mt-2">
-              <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+              <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md bg-background px-3 py-1.5 text-text  outline outline-1 -outline-offset-1 outline-text placeholder:text-white focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
             </div>
           </div>
   
           <div class="sm:col-span-3">
             <label for="last-name" class="block text-sm/6 font-medium text-text">Last name</label>
             <div class="mt-2">
-              <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+              <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md bg-background px-3 py-1.5 text-text outline outline-1 -outline-offset-1 outline-text placeholder:text-white focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
             </div>
           </div>
   
           <div class="sm:col-span-4">
             <label for="email" class="block text-sm/6 font-medium text-text">Email address</label>
             <div class="mt-2">
-              <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+              <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md bg-background px-3 py-1.5 text-text outline outline-1 -outline-offset-1 outline-text placeholder:text-white focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
             </div>
           </div>
   
           <div class="sm:col-span-3">
             <label for="country" class="block text-sm/6 font-medium text-text">Country</label>
             <div class="mt-2 grid grid-cols-1">
-              <select id="country" name="country" autocomplete="country-name" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-8 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                <option>United States</option>
-                <option>Canada</option>
-                <option>Mexico</option>
+              <select id="country" name="country" autocomplete="country-name" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-background py-1.5 pl-3 pr-8 text-text outline-text outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Åland Islands">Åland Islands</option>
+                <option value="Albania">Albania</option>
+                <option value="Algeria">Algeria</option>
+                <option value="American Samoa">American Samoa</option>
+                <option value="Andorra">Andorra</option>
+                <option value="Angola">Angola</option>
+                <option value="Anguilla">Anguilla</option>
+                <option value="Antarctica">Antarctica</option>
+                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Armenia">Armenia</option>
+                <option value="Aruba">Aruba</option>
+                <option value="Australia">Australia</option>
+                <option value="Austria">Austria</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+                <option value="Bahamas">Bahamas</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Barbados">Barbados</option>
+                <option value="Belarus">Belarus</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Belize">Belize</option>
+                <option value="Benin">Benin</option>
+                <option value="Bermuda">Bermuda</option>
+                <option value="Bhutan">Bhutan</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                <option value="Botswana">Botswana</option>
+                <option value="Bouvet Island">Bouvet Island</option>
+                <option value="Brazil">Brazil</option>
+                <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                <option value="Brunei Darussalam">Brunei Darussalam</option>
+                <option value="Bulgaria">Bulgaria</option>
+                <option value="Burkina Faso">Burkina Faso</option>
+                <option value="Burundi">Burundi</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="Cameroon">Cameroon</option>
+                <option value="Canada">Canada</option>
+                <option value="Cape Verde">Cape Verde</option>
+                <option value="Cayman Islands">Cayman Islands</option>
+                <option value="Central African Republic">Central African Republic</option>
+                <option value="Chad">Chad</option>
+                <option value="Chile">Chile</option>
+                <option value="China">China</option>
+                <option value="Christmas Island">Christmas Island</option>
+                <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Comoros">Comoros</option>
+                <option value="Congo">Congo</option>
+                <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+                <option value="Cook Islands">Cook Islands</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Cote D'ivoire">Cote D'ivoire</option>
+                <option value="Croatia">Croatia</option>
+                <option value="Cuba">Cuba</option>
+                <option value="Cyprus">Cyprus</option>
+                <option value="Czech Republic">Czech Republic</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Djibouti">Djibouti</option>
+                <option value="Dominica">Dominica</option>
+                <option value="Dominican Republic">Dominican Republic</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Egypt">Egypt</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="Equatorial Guinea">Equatorial Guinea</option>
+                <option value="Eritrea">Eritrea</option>
+                <option value="Estonia">Estonia</option>
+                <option value="Ethiopia">Ethiopia</option>
+                <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                <option value="Faroe Islands">Faroe Islands</option>
+                <option value="Fiji">Fiji</option>
+                <option value="Finland">Finland</option>
+                <option value="France">France</option>
+                <option value="French Guiana">French Guiana</option>
+                <option value="French Polynesia">French Polynesia</option>
+                <option value="French Southern Territories">French Southern Territories</option>
+                <option value="Gabon">Gabon</option>
+                <option value="Gambia">Gambia</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Germany">Germany</option>
+                <option value="Ghana">Ghana</option>
+                <option value="Gibraltar">Gibraltar</option>
+                <option value="Greece">Greece</option>
+                <option value="Greenland">Greenland</option>
+                <option value="Grenada">Grenada</option>
+                <option value="Guadeloupe">Guadeloupe</option>
+                <option value="Guam">Guam</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Guernsey">Guernsey</option>
+                <option value="Guinea">Guinea</option>
+                <option value="Guinea-bissau">Guinea-bissau</option>
+                <option value="Guyana">Guyana</option>
+                <option value="Haiti">Haiti</option>
+                <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                <option value="Honduras">Honduras</option>
+                <option value="Hong Kong">Hong Kong</option>
+                <option value="Hungary">Hungary</option>
+                <option value="Iceland">Iceland</option>
+                <option value="India">India</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                <option value="Iraq">Iraq</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Isle of Man">Isle of Man</option>
+                <option value="Israel">Israel</option>
+                <option value="Italy">Italy</option>
+                <option value="Jamaica">Jamaica</option>
+                <option value="Japan">Japan</option>
+                <option value="Jersey">Jersey</option>
+                <option value="Jordan">Jordan</option>
+                <option value="Kazakhstan">Kazakhstan</option>
+                <option value="Kenya">Kenya</option>
+                <option value="Kiribati">Kiribati</option>
+                <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                <option value="Korea, Republic of">Korea, Republic of</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                <option value="Latvia">Latvia</option>
+                <option value="Lebanon">Lebanon</option>
+                <option value="Lesotho">Lesotho</option>
+                <option value="Liberia">Liberia</option>
+                <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                <option value="Liechtenstein">Liechtenstein</option>
+                <option value="Lithuania">Lithuania</option>
+                <option value="Luxembourg">Luxembourg</option>
+                <option value="Macao">Macao</option>
+                <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+                <option value="Madagascar">Madagascar</option>
+                <option value="Malawi">Malawi</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Maldives">Maldives</option>
+                <option value="Mali">Mali</option>
+                <option value="Malta">Malta</option>
+                <option value="Marshall Islands">Marshall Islands</option>
+                <option value="Martinique">Martinique</option>
+                <option value="Mauritania">Mauritania</option>
+                <option value="Mauritius">Mauritius</option>
+                <option value="Mayotte">Mayotte</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                <option value="Moldova, Republic of">Moldova, Republic of</option>
+                <option value="Monaco">Monaco</option>
+                <option value="Mongolia">Mongolia</option>
+                <option value="Montenegro">Montenegro</option>
+                <option value="Montserrat">Montserrat</option>
+                <option value="Morocco">Morocco</option>
+                <option value="Mozambique">Mozambique</option>
+                <option value="Myanmar">Myanmar</option>
+                <option value="Namibia">Namibia</option>
+                <option value="Nauru">Nauru</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="Netherlands Antilles">Netherlands Antilles</option>
+                <option value="New Caledonia">New Caledonia</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Niger">Niger</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Niue">Niue</option>
+                <option value="Norfolk Island">Norfolk Island</option>
+                <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                <option value="Norway">Norway</option>
+                <option value="Oman">Oman</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Palau">Palau</option>
+                <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                <option value="Panama">Panama</option>
+                <option value="Papua New Guinea">Papua New Guinea</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Peru">Peru</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Pitcairn">Pitcairn</option>
+                <option value="Poland">Poland</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Puerto Rico">Puerto Rico</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Reunion">Reunion</option>
+                <option value="Romania">Romania</option>
+                <option value="Russian Federation">Russian Federation</option>
+                <option value="Rwanda">Rwanda</option>
+                <option value="Saint Helena">Saint Helena</option>
+                <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                <option value="Saint Lucia">Saint Lucia</option>
+                <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                <option value="Samoa">Samoa</option>
+                <option value="San Marino">San Marino</option>
+                <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Senegal">Senegal</option>
+                <option value="Serbia">Serbia</option>
+                <option value="Seychelles">Seychelles</option>
+                <option value="Sierra Leone">Sierra Leone</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Slovakia">Slovakia</option>
+                <option value="Slovenia">Slovenia</option>
+                <option value="Solomon Islands">Solomon Islands</option>
+                <option value="Somalia">Somalia</option>
+                <option value="South Africa">South Africa</option>
+                <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                <option value="Spain">Spain</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="Sudan">Sudan</option>
+                <option value="Suriname">Suriname</option>
+                <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                <option value="Swaziland">Swaziland</option>
+                <option value="Sweden">Sweden</option>
+                <option value="Switzerland">Switzerland</option>
+                <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                <option value="Taiwan">Taiwan</option>
+                <option value="Tajikistan">Tajikistan</option>
+                <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Timor-leste">Timor-leste</option>
+                <option value="Togo">Togo</option>
+                <option value="Tokelau">Tokelau</option>
+                <option value="Tonga">Tonga</option>
+                <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                <option value="Tunisia">Tunisia</option>
+                <option value="Turkey">Turkey</option>
+                <option value="Turkmenistan">Turkmenistan</option>
+                <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                <option value="Tuvalu">Tuvalu</option>
+                <option value="Uganda">Uganda</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="United Arab Emirates">United Arab Emirates</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States">United States</option>
+                <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Uzbekistan">Uzbekistan</option>
+                <option value="Vanuatu">Vanuatu</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Viet Nam">Viet Nam</option>
+                <option value="Virgin Islands, British">Virgin Islands, British</option>
+                <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                <option value="Wallis and Futuna">Wallis and Futuna</option>
+                <option value="Western Sahara">Western Sahara</option>
+                <option value="Yemen">Yemen</option>
+                <option value="Zambia">Zambia</option>
+                <option value="Zimbabwe">Zimbabwe</option>
               </select>
               <svg class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
                 <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
@@ -162,35 +515,35 @@
           <div class="col-span-full">
             <label for="street-address" class="block text-sm/6 font-medium text-text">Street address</label>
             <div class="mt-2">
-              <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+              <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md bg-background px-3 py-1.5 text-base text-text outline-1 -outline-offset-1 outline-text placeholder:text-white focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
             </div>
           </div>
   
           <div class="sm:col-span-2 sm:col-start-1">
             <label for="city" class="block text-sm/6 font-medium text-text">City</label>
             <div class="mt-2">
-              <input type="text" name="city" id="city" autocomplete="address-level2" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+              <input type="text" name="city" id="city" autocomplete="address-level2" class="block w-full rounded-md bg-background px-3 py-1.5 text-base text-text outline-text outline-1 -outline-offset-1  placeholder:text-white focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
             </div>
           </div>
   
           <div class="sm:col-span-2">
             <label for="region" class="block text-sm/6 font-medium text-text">State / Province</label>
             <div class="mt-2">
-              <input type="text" name="region" id="region" autocomplete="address-level1" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+              <input type="text" name="region" id="region" autocomplete="address-level1" class="block w-full rounded-md bg-background px-3 py-1.5 text-base text-text outline-text outline-1 -outline-offset-1  placeholder:text-white focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
             </div>
           </div>
   
           <div class="sm:col-span-2">
             <label for="postal-code" class="block text-sm/6 font-medium text-text">ZIP / Postal code</label>
             <div class="mt-2">
-              <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+              <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code" class="block w-full rounded-md bg-background px-3 py-1.5 text-base text-text outline-text outline-1 -outline-offset-1  placeholder:text-white focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
             </div>
           </div>
         </div>
       </div>
     </div>
   
-    <div class="mt-6 flex items-center justify-center gap-x-6 pb-3">
+    <div class="mt-6 flex items-center justify-center gap-x-6 pb-3 max-md:pr-20">
       <button type="button" class="text-sm/6 font-semibold text-text">Cancel</button>
       <button type="submit" class="rounded-md bg-text px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-background hover:text-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
     </div>
