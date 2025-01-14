@@ -6,51 +6,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Pure Rxcing, Professional team from Lithuania racing in WEC, GTWC, ALMS and more." />
 
-	<meta property="og:locale" content="en_US" />
-	<meta property="og:type" content="website" />
+	  <meta property="og:locale" content="en_US" />
+	  <meta property="og:type" content="website" />
   	<meta property="og:title" content="Home - Pure Rxcing" />
-	<meta property="og:description" content="Pure Rxcing, Professional team from Lithuania racing in WEC, GTWC, ALMS and more." />
+	  <meta property="og:description" content="Pure Rxcing, Professional team from Lithuania racing in WEC, GTWC, ALMS and more." />
   	<meta property="og:url" content="https://www.PureRxcing.com/" />
-	<meta property="og:site_name" content="Pure Rxcing" />
+	  <meta property="og:site_name" content="Pure Rxcing" />
 
-	<meta property="article:publisher" content="https://www.instagram.com/purerxcing/" />
+	  <meta property="article:publisher" content="https://www.instagram.com/purerxcing/" />
   	<meta property="article:modified_time" content="2023-02-28T08:42:02+00:00" />
   	<meta name="twitter:card" content="summary_large_image" />
   	<meta name="msvalidate.01" content="A6B70FDA1B7B883A373BF1E83A0FFC7B" />
   	<meta name="google-site-verification" content="google4469e2cada55ca59" />
 
+    <script src="https://unpkg.com/@dunks1980/cookiemunch/cookiemunch.min.js"></script>
     <script src="https://cmp.osano.com/AzZu9oUSKmHuVDIp0/72a99fd4-572c-4148-ad71-1ce257224984/osano.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="https://kit.fontawesome.com/428684f03b.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
-    <script src="./Navbar.js"></script>
-    <script src="./loader.js"></script>
+    <script src="./UI/Components/Navbar.js"></script>
+    <script src="./UI/Components/loader.js"></script>
+    <script src="./UI/Components/navbar.min.js" crossorigin="anonymous" defer></script>
 
-    <link rel="icon" type="icon" href="./icon.png">
-    <link rel="canonical" href="https://www.PureRxcing.com/" />
+    <link rel="icon" type="icon" href="./src/Assets/Content/icon.png">
+	  <link rel="canonical" href="https://www.PureRxcing.com/" />
+    <link rel="alternate" href="./feed.xml" type="application/rss+xml" title="Pure Rxcing Feed">
 
-    <link rel="stylesheet" href="./loader.css" type="text/css" media="all">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./headers.css" type="text/css" media="all">
-    <link rel="stylesheet" href="./body.css" type="text/css" media="all">
-    <link rel="stylesheet" href="./icons.css" type="text/css" media="all">
-    <link rel="stylesheet" href="./output.css" type="text/css" media="all">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@dunks1980/cookiemunch/cookiemunch_flat_dark.min.css">
+    <link rel="stylesheet" href="./UI/CSS/loader.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./UI/CSS/theme/headers.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./UI/CSS/theme/body.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./UI/CSS/theme/icons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./UI/CSS/output.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./UI/CSS/theme/main.css" type="text/css" media="all">
 
-
-  
+    <script data-cookieconsent="ignore">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("consent", "default", {
+        ad_personalization: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        wait_for_update: 500
+      });
+      gtag("set", "ads_data_redaction", true);
+      gtag("set", "url_passthrough", true);
+    </script>
+    <!-- End Google Consent Mode-->
+    
+    
+    <!-- Google Tag Manager -->
+    <script data-cookieconsent="ignore">
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXX');</script>
+    <!-- End Google Tag Manager -->
+  <style>
+    /* Loader container */
+    .loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #ffffff; /* Background color of the loader */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 0; /* Start fully transparent */
+      transition: opacity 2s ease-in-out; /* Smooth transition for fade-in and fade-out */
+    }
+    
+    /* Fully visible state for the loader */
+    .loader.visible {
+      opacity: 1; /* Fully visible */
+    }
+    
+    /* Hidden state for fade-out effect */
+    .loader.hidden {
+      opacity: 0; /* Fully transparent */
+      pointer-events: none; /* Ensure it's not interactive */
+    }
+    
+    /* Logo animation (optional spinning) */
+    .loader-logo {
+      width: full; /* Adjust the size */
+      /*animation: spin 2s linear infinite; /* Example animation */
+    }
+    /* Main content (initially hidden) */
+    .content {
+      display: none;
+    }
+  </style>
+  <script>
+    window.addEventListener("load", function() {
+      const loader = document.getElementById('loader');
+      const content = document.getElementById('content');
+    
+      // Check if the loader has already been shown
+      if (!localStorage.getItem('loaderShown')) {
+        // Show the loader with fade-in effect
+        loader.classList.add('visible');
+    
+        // Ensure the loader is shown for at least 5 seconds
+        setTimeout(() => {
+          loader.classList.remove('visible'); // Start fade-out
+          loader.classList.add('hidden'); // Add the hidden class for fade-out effect
+    
+          // Wait for the fade-out transition to complete before showing content
+          setTimeout(() => {
+            loader.style.display = 'none'; // Hide the loader completely
+            content.style.display = 'block'; // Show the main content
+            localStorage.setItem('loaderShown', 'true'); // Store that the loader has been shown
+          }, 2000); // 2000 milliseconds = duration of fade-out transition
+        }, 3000); // 5000 milliseconds = 5 seconds
+      } else {
+        // Directly show the content if the loader was already shown
+        loader.style.display = 'none'; // Hide the loader
+        content.style.display = 'block'; // Show the main content
+      }
+    });
+  </script>
+    <div id="loader" class="loader">
+    <img src="./Assets/Content/icon.png" alt="Brand Logo" class="loader-logo">
+    </div>
 </head>
 <body>
   <!--Navbar-->
   <nav class="bg-background text-text" id="start">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-text">
       <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="./icon.png" class=" h-16 rounded-lg" alt="Pure Rxcing Logo" />
+          <img src="./Assets/Content/icon.png" class=" h-16 rounded-lg" alt="Pure Rxcing Logo" />
       </a>
       <button data-collapse-toggle="navbar-dropdown" type="button"
               class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-text rounded-lg md:hidden" aria-controls="navbar-dropdown" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <svg class="w-5 h-5 hover:text-white transition-max ease-in-out duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
           </svg>
       </button>
@@ -68,7 +169,7 @@
                 </svg>
               </button>
               <!-- Dropdown menu -->
-              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-background divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-background divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 dropdown-menu" aria-labelledby="dropdownNavbarLink">
                   <ul class="py-2 text-sm text-text dark:text-gray-400 transition-max ease-in-out duration-300" aria-labelledby="dropdownLargeButton">
                     <li>
                       <a href="./About.html" class="block px-4 py-2 hover:text-white">About</a>
@@ -101,12 +202,12 @@
   <!--End Navbar-->
 
 <!--Background photo-->
-    <img src="thumbnail.jpg" class="h-full w-full -z-50 relative max-md:h-56">
-    <h1 class="absolute bg-opacity-50 h-auto text-text pl-3 top-full text-7xl w-full bg-background rounded-tl animate-fadeUp">RACE WITH PASSION</h1>
+    <img src="./Assets/Content/thumbnail.jpg" class="h-full w-full -z-50 relative max-md:h-56">
+    <h1 class="absolute bg-opacity-50 h-auto text-text pl-3 top-full text-7xl w-full bg-background rounded-tl">RACE WITH PASSION</h1>
     <!--End Bg Photo-->
 
     <!--Main section-->
-    <div class="relative isolate overflow-hidden bg-background px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0 animate-fadeUp">
+    <div class="relative isolate overflow-hidden bg-background px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
       <div class="absolute inset-0 -z-10 overflow-hidden">
       </div>
       <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
@@ -121,7 +222,7 @@
           </div>
         </div>
         <div class="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <img class="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" src="./src/Assets/Content/LMGT3-Premiere-92-Bachler-Malykhin-Sturm.jpg.webp" alt="">
+          <img class="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" src="./Assets/Content/LMGT3-Premiere-92-Bachler-Malykhin-Sturm.jpg.webp" alt="">
         </div>
         <div class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div class="lg:pr-4">
@@ -145,24 +246,24 @@
     <!--End Main Section-->
     <hr class="text-text">
     <!--News-->
-    <div class="bg-background animate-fadeUp" id="News">
+    <div class="bg-background" id="News">
       <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h1 class="text-7xl text-text pb-5 justify-center text-center">NEWS</h1>
         <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-          <a href="Pure-Rxcing-Revails-New-Livery-For-Its-LMP2-Car-In-ELMS.html" class="group">
-            <img src="./Pure-Rxcing-LPM2-car.jpg" alt="Pure Rxcing revails new livery for ELMS" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
+          <a href="./Pure-Rxcing-Revails-New-Livery-For-Its-LMP2-Car-In-ELMS.html" class="group">
+            <img src="./Assets/Content/Pure-Rxcing-LPM2-car.jpg" alt="Pure Rxcing revails new livery for ELMS" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
             <h3 class="mt-4 text-sm text-text">Pure Rxcing revails new livery for its LPM2 car in European Le man's Series</h3>
           </a>
           <a href="#" class="group">
-            <img src="./LMGT3-Premiere-92-Bachler-Malykhin-Sturm.jpg (1).webp" alt="First time Winner in WEC" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
+            <img src="./Assets/Content/LMGT3-Premiere-92-Bachler-Malykhin-Sturm.jpg (1).webp" alt="First time Winner in WEC" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
             <h3 class="mt-4 text-sm text-text">Pure Rxcing wins its first drivers and constructors championship in FIA World Endurance Championship</h3>
           </a>
           <a href="#" class="group">
-            <img src="./92-Pure-Rxcing-Porsche-911-GT3-R-LMGT3-FIA-WEC-2024-Qatar-2.jpg" alt="Pure Rxcing Wins in Qatar" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
+            <img src="./Assets/Content/92-Pure-Rxcing-Porsche-911-GT3-R-LMGT3-FIA-WEC-2024-Qatar-2.jpg" alt="Pure Rxcing Wins in Qatar" class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
             <h3 class="mt-4 text-sm text-text">Pure Rxcing victorious in 1812Km of Qatar</h3>
           </a>
           <a href="#" class="group">
-            <img src="./icon.png" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
+            <img src="./Assets/Content/icon.png" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]">
             <h3 class="mt-4 text-sm text-text">Statement</h3>
           </a>
         </div>
@@ -195,7 +296,7 @@
           <div>
             <h3 class="text-lg font-semibold mb-4 text-text">Support</h3>
             <ul>
-              <li><a href="#" class="hover:text-text transition-max ease-in-out duration-300">Cookie Policy</a></li>
+              <li><a href="./" class="hover:text-text transition-max ease-in-out duration-300">Cookie Policy</a></li>
               <li><a href="./privacy-policy.html" target="_blank" class="hover:text-text transition-max ease-in-out duration-300">Privacy Policy</a></li>
               <li><a href="./Terms-and-Conditions.html" target="_blank" class="hover:text-text transition-max ease-in-out duration-300">Terms and Conditions</a></li>
             </ul>
@@ -221,26 +322,52 @@
                   <i class="fa-brands fa-instagram fa-2xl text-text transition-max ease-in-out duration-30"></i>
                 </a>
               </li>
-		 <li>
-		<h3>My Website</h1>
-		  <button onclick="fetchData()">Fetch Data</button>
-		  <script>
-		    function fetchData() {
-		      fetch('http://localhost:27017/data')
-		        .then(response => response.json())
-		        .then(data => console.log(data))
-		        .catch(err => console.error('Error:', err));
-		    }
-		  </script>
-		    </li>
             </ul>
           </div>
         </div>
         <div class="mt-10 top-10 relative text-center text-sm text-gray-400 w-full">
-          &copy; 2024 Pure Rxcing. All rights reserved.
+          &copy; 2025 Pure Rxcing. All rights reserved.
         </div>
       </div>
     </footer>
     <!--End footer-->
+
+    <!--cookie consent-->
+    <script>
+      var options = {
+        settings: {
+          cookie_title: 'My site cookies',
+          cookie_image: ' https://unpkg.com/@dunks1980/cookiemunch/cookiemunch_flat_dark.svg',
+        },
+        cookies: [
+          {
+            id: "1",
+            name: "Accept All",
+            used_for: "By clicking 'Accept', you agree to the use of cookies to improve your browsing experience, enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            url_text: "Privacy",
+            url: "./privacy-policy.html",
+            accepted_function: "console.log('accepted_function fired!!!');",
+            declined_function: "console.log('declined_function fired!!!');"
+          },
+          {
+            id: "2",
+            name: "Reject All",
+            used_for: "By clicking 'Reject All', you will block some types of cookies which may impact your experience of the site and the services we are able to offer.",
+            url_text: "cookies",
+            accepted_function: add_example_script,
+            declined_function: remove_example_script
+          }
+        ]
+      };
+      
+      cookiemunch(options);
+      
+      function add_example_script() {
+        console.log("add_example_script fired!!!");
+      }
+      function remove_example_script() {
+        console.log("remove_example_script fired!!!");
+      }
+      </script>
 </body>
 </html>
